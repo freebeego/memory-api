@@ -12,8 +12,4 @@ module.exports = {
       internalServerError: 'Internal server error',
     },
   },
-  validation: {
-    incorrectName: 'Given an incorrect name',
-    incorrectTime: 'Given an incorrect time',
-  },
 };
