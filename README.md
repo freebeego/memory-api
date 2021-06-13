@@ -1,4 +1,4 @@
-# Backend сервис проекта "Memory".
+# Backend проекта "Memory".
 
 **Сервис доступен по адресу: https://api.memory.listen-me.ru**
 
