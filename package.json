@@ -1,0 +1,37 @@
+{
+  "name": "memory-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/freebeego/memory-api.git"
+  },
+  "author": "FreeBeeGo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freebeego/memory-api/issues"
+  },
+  "homepage": "https://github.com/freebeego/memory-api#readme",
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "celebrate": "^14.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "express-slow-down": "^1.4.0",
+    "express-winston": "^4.1.0",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.12.13",
+    "winston": "^3.3.3"
+  }
+}
