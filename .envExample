@@ -1,0 +1,8 @@
+Example of production config
+NODE_ENV=production
+# Server port
+PORT=3000
+# mongoDB settings
+DB_NAME=memory
+DB_HOST=localhost
+DB_PORT=27017
