@@ -31,13 +31,7 @@ const {
 const limiter = rateLimit(rateLimitConfig);
 const speedLimiter = slowDown(slowDownConfig);
 
-mongoose
-  .connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
+mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`)
   .then(() => {
     const app = express();
 
