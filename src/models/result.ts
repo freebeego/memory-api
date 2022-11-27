@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose'
 
 const resultSchema = new mongoose.Schema({
   name: {
@@ -9,6 +9,6 @@ const resultSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-});
+})
 
-module.exports = mongoose.model('result', resultSchema);
+export const Result = mongoose.model('result', resultSchema)

@@ -1,3 +1,17 @@
 {
-  "extends": "airbnb-base"
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": "off",
+    "@typescript-eslint/semi": "off",
+    "no-restricted-exports": ["off", { "restrictedNamedExports": ["default"] }],
+    "import/prefer-default-export": "off"
+  }
 }

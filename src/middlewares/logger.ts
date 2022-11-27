@@ -1,14 +1,14 @@
-const winston = require('winston');
-const expressWinston = require('express-winston');
+import winston from 'winston'
+import expressWinston from 'express-winston'
 
-const requestLogger = expressWinston.logger({
+export const requestLogger = expressWinston.logger({
   transports: [
     new winston.transports.File({ filename: './logs/request.log' }),
   ],
   format: winston.format.json(),
-});
+})
 
-const expressErrorTransports = [new winston.transports.File({ filename: './logs/error.log' })];
+const expressErrorTransports: winston.transport[] = [new winston.transports.File({ filename: './logs/error.log' })]
 if (process.env.NODE_ENV !== 'production') {
   expressErrorTransports.push(
     new winston.transports.Console({
@@ -19,15 +19,15 @@ if (process.env.NODE_ENV !== 'production') {
         winston.format.colorize(),
       ),
     }),
-  );
+  )
 }
 
-const errorLogger = expressWinston.errorLogger({
+export const errorLogger = expressWinston.errorLogger({
   transports: expressErrorTransports,
   format: winston.format.json(),
-});
+})
 
-const logger = winston.createLogger({
+export const logger = winston.createLogger({
   level: 'info',
   format: winston.format.json(),
   transports: [
@@ -40,7 +40,7 @@ const logger = winston.createLogger({
       ),
     }),
   ],
-});
+})
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -52,11 +52,5 @@ if (process.env.NODE_ENV !== 'production') {
         winston.format.colorize(),
       ),
     }),
-  );
+  )
 }
-
-module.exports = {
-  requestLogger,
-  errorLogger,
-  logger,
-};
